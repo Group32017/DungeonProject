@@ -23,6 +23,7 @@ public class CharSelect : MonoBehaviour {
         {
             loadtext.color = new Color(loadtext.color.r,loadtext.color.g, loadtext.color.b, Mathf.PingPong(Time.time, 1));
         }
+        Debug.Log(GlobalValues.PlayerElected);
     }
 
     void OnMouseOver()
@@ -41,7 +42,18 @@ public class CharSelect : MonoBehaviour {
             loading = true;
             loadtext.text = "Loading...";
             StartCoroutine(LoadSceneMode());
-
+            if (this.gameObject.name == "Player1")
+            {
+                GlobalValues.PlayerElected = 1;
+            }else if (this.gameObject.name == "Player2")
+            {
+                GlobalValues.PlayerElected = 2;
+            }
+            else if (this.gameObject.name == "Player3")
+            {
+                GlobalValues.PlayerElected = 3;
+            }
+          
         }
     }
 
