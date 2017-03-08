@@ -23,7 +23,7 @@ public class CharSelect : MonoBehaviour {
         {
             loadtext.color = new Color(loadtext.color.r,loadtext.color.g, loadtext.color.b, Mathf.PingPong(Time.time, 1));
         }
-        Debug.Log(GlobalValues.PlayerElected);
+        
     }
 
     void OnMouseOver()
