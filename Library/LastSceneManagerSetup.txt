@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MainMenuScene.unity
+- path: Assets/Maze4Scene.unity
   isLoaded: 1
   isActive: 1
