@@ -28,11 +28,16 @@ public class PlayerLoad : MonoBehaviour
                 case 2:
                     Instantiate(player2, spawnPoint.transform.position, spawnPoint.transform.rotation);
                     Player2UI.SetActive(true);
+                    GlobalValues.Ammo = GlobalValues.PistolClipSize;
+                    GlobalValues.TotalAmmo = GlobalValues.PistolClipSize * 2;
                     spawned = true;
                     break;
 
                 case 3:
                     Instantiate(player3, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                    GlobalValues.Ammo = GlobalValues.ShootGunClipSize;
+                    GlobalValues.TotalAmmo = GlobalValues.ShootGunClipSize * 2;
+                    Player2UI.SetActive(true);
                     spawned = true;
                     break;
             }
