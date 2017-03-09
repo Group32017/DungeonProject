@@ -7,15 +7,24 @@ public class EnemyScript: MonoBehaviour
     public GameObject player;
     private int timeNo = 0;
     // Use this for initialization
+
+        
+
+    
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         animat = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     private void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+        
+
         var direction = player.transform.position - transform.position;
         var angle = Vector3.Angle(direction, transform.forward);
         if (Vector3.Distance(player.transform.position, transform.position) < 10 && angle < 90)
