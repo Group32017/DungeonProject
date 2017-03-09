@@ -43,6 +43,7 @@ public class EnemyScript: MonoBehaviour
                 }
             }
         }
-        animat.SetInteger("State", 0);
+        else if (Vector3.Distance(player.transform.position, transform.position) > 90)
+            animat.SetInteger("State", 0);
     }
 }
