@@ -16,6 +16,7 @@ public class GlobalValues : MonoBehaviour {
     public static int ShootGunClipSize = 8;
 
     public static int TurretMaxHealth = 10;
+    public static int BossHealth = 40;
 
     public static void Die()
     {

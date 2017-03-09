@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 
 
-public class enem : MonoBehaviour
+public class EnemyScript: MonoBehaviour
 {
+    public Animator animat;
     public GameObject player;
-    private int timeNo = 0; 
+    private int timeNo = 0;
     // Use this for initialization
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        animat = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,13 +23,17 @@ public class enem : MonoBehaviour
             direction.y = 0;
 
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.1f);
-
+            animat.SetInteger("State", 0);
             if (direction.magnitude < 6 && direction.magnitude > 2)
+            {
                 transform.Translate(0, 0, 0.05f);
+                animat.SetInteger("State", 2);
+            }
             else if (direction.magnitude < 2)
             {
                 if (timeNo == 40)
                 {
+                    animat.SetInteger("State", 3);
                     GlobalValues.PlayerHealth -= 5;
                     timeNo = 0;
                 }
@@ -37,5 +43,6 @@ public class enem : MonoBehaviour
                 }
             }
         }
+        animat.SetInteger("State", 0);
     }
 }
