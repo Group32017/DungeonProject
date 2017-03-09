@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1861BA7B-F2FC-38B9-8BD5-03E6DD130740}</ProjectGuid>
+    <ProjectGuid>{691100A4-79CE-08DC-9ECC-3750C2FD70E8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -81,15 +81,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Dungeon.CSharp.Plugins.csproj">
-      <Project>{7B5B73BA-6D3C-3A36-1AB0-9D51B9438B84}</Project>
-      <Name>Dungeon.CSharp.Plugins</Name>
+    <ProjectReference Include="dungeon.CSharp.Plugins.csproj">
+      <Project>{C5106709-28DA-C93F-1D4C-EE9C0513B4CD}</Project>
+      <Name>dungeon.CSharp.Plugins</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Character Select\Campfire\Script\FireLightScript.cs" />
+    <Compile Include="Assets\Character Select\Scripts\CharSelect.cs" />
+    <Compile Include="Assets\Enemey Scripts\BossHealth.cs" />
+    <Compile Include="Assets\Enemey Scripts\BossScript.cs" />
+    <Compile Include="Assets\Enemey Scripts\EnemyScript.cs" />
+    <Compile Include="Assets\Enemey Scripts\IDmg.cs" />
+    <Compile Include="Assets\Enemey Scripts\MeleeAttack.cs" />
+    <Compile Include="Assets\Enemey Scripts\TurretFire.cs" />
+    <Compile Include="Assets\Enemey Scripts\TurretHealth.cs" />
+    <Compile Include="Assets\Enemey Scripts\bullet.cs" />
+    <Compile Include="Assets\Enemey Scripts\turret.cs" />
+    <Compile Include="Assets\General Scripts\GlobalValues.cs" />
+    <Compile Include="Assets\General Scripts\LevelFinish.cs" />
+    <Compile Include="Assets\General Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\General Scripts\PlayerLoad.cs" />
+    <Compile Include="Assets\General Scripts\PlayerShoot.cs" />
+    <Compile Include="Assets\MainMenu\Scripts\MenuButtons.cs" />
     <Compile Include="Assets\Torch\LightFlicker.cs" />
+    <Compile Include="Assets\UI elements\AmmoDisplay.cs" />
+    <Compile Include="Assets\UI elements\Player2UI.cs" />
+    <Compile Include="Assets\UI elements\TotalAmmoDisplay.cs" />
+    <Compile Include="Assets\rotate_Portal.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Boss\Boss_animation_Readme.txt" />
+    <None Include="Assets\Character Select\Campfire\License.txt" />
+    <None Include="Assets\Robot\Robot_animation_Readme.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
   </ItemGroup>
